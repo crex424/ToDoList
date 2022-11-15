@@ -76,18 +76,24 @@ function displayToDoItem(item:ToDoItem):void {
     let itemText = createElement("h3");
     itemText.innerText = item.title;
 
-    // ex. <p> November 29st 2022</p>
+    // ex. <p>November 29st 2022</p>
     let itemDate = createElement("p");
     itemDate.innerText = item.dueDate.toDateString();
 
     // creates a div to hold everything
+    // <div class = "todo completed"></div> or <div class = "todo">
     let itemDiv = createElement("div");
+    itemDiv.classList.add("todo")
     if (item.isCompleted) {
         itemDiv.classList.add("completed");
     }
 
     // Grabs itemDate and itemText and 
     // contains them in the itemDiv
+    // <div class = "completed">
+    //     <h3>Unload laundry</h3>
+    //     <p>November 29st 2022</p>
+    // </div>
     itemDiv.appendChild(itemText);
     itemDiv.appendChild(itemDate);
 
