@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 </head>
 <body>
     <h1>ToDoList</h1>
@@ -24,5 +25,11 @@
     <br>
 
     <input type="button" value="Add Item to ToDoList">
+
+    <script src="https://unpkg.com/js-datepicker"></script>
+    <script>
+        const picker = datepicker("#due-date");
+        picker.setMin(new Date()); // sets to today
+    </script>
 </body>
 </html>
