@@ -22,11 +22,27 @@
     text-decoration: line-through;
 }
 
+#form {
+    border: .1em solid black;
+    width: 350px;
+    height: 85px;
+    padding-left: .5em;
+}
+
 #complete-items {
-    border: .1em solid blue;
+    border: .1em solid lightgreen;
 }
 
 #incomplete-items {
     border: .1em solid red;
     margin-bottom: 1em;
+}
+
+#complete-items, 
+#incomplete-items {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
 }

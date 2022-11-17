@@ -112,7 +112,11 @@ function displayToDoItem(item:ToDoItem):void {
 
 
 }
-
+/**
+ * When the user clicks on one of the toDo items, the item will
+ * be colored green, faded, and have a line through it to represent
+ * the item being completed.
+ */
 function markAsComplete() {
     let itemDiv = <HTMLElement>this;
     itemDiv.classList.add("completed");
@@ -120,5 +124,3 @@ function markAsComplete() {
     let completeItems = getById("complete-items");
     completeItems.appendChild(itemDiv);
 }
-
-// Task: Allow user to mark a ToDoItem as completed
